@@ -1,0 +1,158 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "editor.lineHeight": 0,
+    "tabnine.experimentalAutoImports": true,
+    "editor.fontFamily": "\"Input\"",
+    "editor.fontLigatures": true,
+    "python.defaultInterpreterPath": "C:\\Program Files\\Python39\\python.exe",
+    "files.autoSave": "afterDelay",
+    "editor.renderLineHighlight": "none",
+    "settingsSync.ignoredExtensions": [
+
+    
+    ],
+    "better-comments.tags": [
+        
+    
+    
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.fontWeight": "550",
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.fontSize": 13,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "glassit.alpha": 245,
+    
+    // Vim settings
+    "vim.easymotion": true, 
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+    }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+        },
+        {
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ],
+			"when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "before": [
+                "<S-tab>"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ],
+			"when": "editorTextFocus && !editorReadonly"
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+          "before": ["<leader>", "d"],
+         "after": ["d", "d"]
+        },
+        {
+          "before": ["<tab>"],
+          "commands": ["workbench.action.nextEditor"]
+        },
+        {
+          "before": ["<S-tab>"],
+          "commands": ["workbench.action.previousEditor"]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["d", "d"],
+          "after": ["d", "d"]
+        },
+        {
+          "before": ["<C-n>"],
+          "commands": [":nohl"]
+        },
+        {
+          "before": ["K"],
+          "commands": ["lineBreakInsert"],
+          "silent": true
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    }
+    
+}
