@@ -4,6 +4,7 @@ set backspace=indent,eol,start " For using backspace
 set nocompatible " Turns off legacy vi mode
 set encoding=utf-8
 set nospell " No spellcheck
+set nohls " No highlight searc
 
 " Set the font and font size 
 if has("gui_running")
@@ -36,9 +37,34 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'artanikin/vim-synthwave84'
 
 call vundle#end() " End of plugin list
 filetype plugin indent on     " Required!
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'author' ] ]
+      \ },
+      \ 'component': {
+      \   'author': 'LP2X0X'
+      \ },
+      \ }
+
+set laststatus=2 "Always on Lightline
 
 autocmd vimenter * ++nested colorscheme gruvbox " Set the color scheme
 set bg=dark
@@ -104,11 +130,7 @@ hi SpellLocal cterm=underline "ctermfg=203 guifg=#ff5f5f
 hi SpellRare cterm=underline "ctermfg=203 guifg=#ff5f5f 
 hi SpellCap cterm=underline "ctermfg=203 guifg=#ff5f5f
 
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
 
-set laststatus=2 "Always on Lightline
 
 set shortmess+=A "For swap file pop-up error
 set hlsearch
