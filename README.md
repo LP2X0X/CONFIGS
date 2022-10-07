@@ -1,2 +1,2 @@
-# VIM CONFIG
-This is where i store my GVim and NVim configs.
+# CONFIGS
+This is where i store my GVim, NVim and VSCode configs.
