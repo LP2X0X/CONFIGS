@@ -42,17 +42,6 @@ Plugin 'artanikin/vim-synthwave84'
 call vundle#end() " End of plugin list
 filetype plugin indent on     " Required!
 
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
@@ -102,7 +91,7 @@ set completeopt=menuone,longest
 set spelllang=en
 
 
-" HOTKEYS
+" HOTKEYS "
 " Spell check
 map <F1> :setlocal spell!<CR> 
 " Map NERDTree to F2
@@ -123,13 +112,17 @@ nnoremap <Right> :vertical resize +1<CR>
 map <F6> :set foldmethod=indent<CR>
 " Toggle foldmethod to manual
 map <F8> :set foldmethod=manual<CR>
+" Map select all to Ctrl + A in normal mode
+nnoremap <C-a> ggVG
+" Paste to Vim cmd (in command mode)
+cnoremap <C-v> <C-r>*
+
 
 " Configure for spell check
 hi SpellBad cterm=underline "ctermfg=203 guifg=#ff5f5f 
 hi SpellLocal cterm=underline "ctermfg=203 guifg=#ff5f5f 
 hi SpellRare cterm=underline "ctermfg=203 guifg=#ff5f5f 
 hi SpellCap cterm=underline "ctermfg=203 guifg=#ff5f5f
-
 
 
 set shortmess+=A "For swap file pop-up error
