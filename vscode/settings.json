@@ -79,28 +79,34 @@
     "terminal.integrated.fontSize": 13,
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "glassit.alpha": 245,
-    
+    "cSpell.diagnosticLevel": "Hint",
+    "workbench.colorCustomizations": {
+
+        // will change the color of three dots to red
+        "editorHint.foreground": "#ff0000",
+
+      },
+      
     // Vim settings
     "vim.easymotion": true, 
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
     "vim.cursorStylePerMode.visual": "block",
     "vim.cursorStylePerMode.visualblock": "block",
     "vim.cursorStylePerMode.visualline": "block",
     "vim.insertModeKeyBindings": [
-    {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-    }
+    //{
+    //    "before": ["j", "k"],
+    //    "after": ["<Esc>"]
+    //}
     ],
     "vim.visualModeKeyBindings": [
-        {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-        },
+        //{
+        //"before": ["j", "k"],
+        //"after": ["<Esc>"]
+        //},
         {
             "before": [
                 "<tab>"
@@ -122,7 +128,7 @@
     ],
     "vim.normalModeKeyBindings": [
         {
-          "before": ["<leader>", "d"],
+         "before": ["<leader>", "d"],
          "after": ["d", "d"]
         },
         {
@@ -133,6 +139,14 @@
           "before": ["<S-tab>"],
           "commands": ["workbench.action.previousEditor"]
         },
+        {
+          "before": ["<C-n>"],
+          "commands": ["workbench.action.files.newUntitledFile"]
+        },
+        {
+          "before": ["<C-h>"],
+          "commands": [":nohl"]
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -140,19 +154,24 @@
           "after": ["d", "d"]
         },
         {
-          "before": ["<C-n>"],
-          "commands": [":nohl"]
-        },
-        {
           "before": ["K"],
           "commands": ["lineBreakInsert"],
           "silent": true
+        },
+    ],
+    "vim.commandLineModeKeyBindings": [
+        {
+            "before": ["<C-v>"],
+            "after": ["<C-r>", "*"]
         },
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
-    }
-    
+    },
+    "code-runner.defaultLanguage": "cpp",
+    "editor.smoothScrolling": true,
+    "output.smartScroll.enabled": false,
+    "editor.tabCompletion": "on",
 }
