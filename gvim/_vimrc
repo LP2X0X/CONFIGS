@@ -38,6 +38,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'artanikin/vim-synthwave84'
+Plugin 'awvalenti/vim-simple-guifont'
 
 call vundle#end() " End of plugin list
 filetype plugin indent on     " Required!
